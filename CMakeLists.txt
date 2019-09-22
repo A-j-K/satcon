@@ -18,13 +18,7 @@ add_subdirectory(mainwindow)
 add_subdirectory(capturewindow)
 
 add_executable(satcon
-  main.cpp
-  #mainwindow/mainwindow.cpp
-  #mainwindow/mainwindow.h
-  #mainwindow/mainwindow.ui
-  #capturewindow/capturewindow.cpp
-  #capturewindow/capturewindow.h
-  #capturewindow/capturewindow.ui
+	main.cpp
 )
 
 target_link_libraries(satcon PRIVATE 
