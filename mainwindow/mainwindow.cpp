@@ -196,10 +196,10 @@ bool tleExclusionManager::check(int satid, const DateTime& d)
 	return rval;
 }
 
-tleExclusionManager&
-tleExclusionManager::clean(const DateTime& in_d)
+void
+tleExclusionManager::clean(const DateTime & in_d)
 {
-	// Remove any entries that are "in the past" (before in_d)
+	// Remove any entries that are "in the past" (i.e. before in_d)
 	auto itor = _list.begin();
 	while (itor != _list.end()) {
 		DateTime t = itor->second;
@@ -210,17 +210,14 @@ tleExclusionManager::clean(const DateTime& in_d)
 			++itor;
 		}
 	}
-	return *this;
 }
 
 bool 
-tleExclusionManager::find(int in_satid, const DateTime* in_p)
+tleExclusionManager::find(int in_satid, DateTime & out_d)
 {
 	for (auto itor = _list.begin(); itor != _list.end(); ++itor) {
-		int satid = itor->first;
-		if (satid == in_satid) {
-			DateTime t = itor->second;
-			in_p = &t;
+		if (itor->first == in_satid) {
+			out_d = itor->second;
 			return true;
 		}
 	}

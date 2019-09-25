@@ -41,9 +41,10 @@ public:
 	tleExclusionManager();
 	~tleExclusionManager();
 	bool check(int satid, const DateTime& d);
-	bool find(int satid, const DateTime* in_p);
+	bool find(int satid, DateTime & out_p);
+	void clean(const DateTime& d);
 	tleExclusionManager& add(int satid, const DateTime& d);
-	tleExclusionManager& clean(const DateTime& d);
+	
 private:
 	List	_list;
 };
