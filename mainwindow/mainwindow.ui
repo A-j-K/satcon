@@ -6,22 +6,34 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>600</height>
+    <width>1012</width>
+    <height>286</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Satellite Obs Controller</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: black;</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QColumnView" name="satColumnView">
+   <widget class="QTableWidget" name="satellitesTable">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>30</y>
-      <width>751</width>
-      <height>192</height>
+      <x>10</x>
+      <y>1</y>
+      <width>981</width>
+      <height>241</height>
      </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: &quot;#400000&quot;;</string>
     </property>
    </widget>
   </widget>
@@ -30,7 +42,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>800</width>
+     <width>1012</width>
      <height>21</height>
     </rect>
    </property>

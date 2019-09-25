@@ -84,6 +84,25 @@ public:
         orbit_number_ = tle.orbit_number_;
     }
 
+	/**
+	 * Get the filename it was defined in
+	 * @returns the filename
+	 */
+	std::string fromFile() const
+	{
+		return fromfile_;
+	}
+
+	/**
+	 * Set the filename it was defined in
+	 * @returns the filename
+	 */
+	Tle& setFromFile(std::string s)
+	{
+		fromfile_ = s;
+		return *this;
+	}
+
     /**
      * Get the satellite name
      * @returns the satellite name
@@ -311,6 +330,7 @@ private:
     void ExtractExponential(const std::string& str, double& val);
 
 private:
+	std::string fromfile_;
     std::string name_;
     std::string line_one_;
     std::string line_two_;

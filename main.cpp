@@ -9,8 +9,8 @@ int main(int argc, char *argv[])
 {
     QApplication app(argc, argv);
     MainWindow mw;
-	CaptureWindow cw;
+	//CaptureWindow cw;
     mw.show();
-	cw.show();
+	//cw.show();
     return app.exec();
 }
